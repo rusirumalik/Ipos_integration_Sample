@@ -28,7 +28,14 @@ public class AppConstants {
         PaymentReference("PAYMENT_REFERENCE"),
         PaymentStatus("PAYMENT_STATUS"),
         PaymentErrorCode("ERROR_CODE"),
-        PaymentErrorMessage("ERROR_MESSAGE");
+        PaymentErrorMessage("ERROR_MESSAGE"),
+        PaymentTransactionId("TRANSACTION_ID"),
+        PaymentTc("TC"),
+        PaymentCardNo("CARD_NO"),
+        PaymentCardType("CARD_TYPE"),
+        PaymentCardExpiry("CARD_EXPIRY"),
+        PaymentTerminalId("TERMINAL_ID")
+        ;
 
         private String description;
 

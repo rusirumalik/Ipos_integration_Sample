@@ -13,7 +13,7 @@
         android:layout_height="wrap_content"
         android:text="Sample App"
         android:textColor="#30336b"
-        android:textSize="24sp"
+        android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -41,35 +41,148 @@
         app:layout_constraintStart_toEndOf="@id/text_view_amount_title"
         app:layout_constraintTop_toTopOf="@id/text_view_amount_title" />
 
+    <Button
+        android:id="@+id/button_clear"
+        android:layout_width="0dp"
+        android:layout_height="30dp"
+        android:layout_margin="10dp"
+        android:layout_weight="1"
+        android:background="#ffbe76"
+        android:text="Clear"
+        android:textColor="#ffffff"
+        app:layout_constraintStart_toEndOf="@id/edit_text_amount"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/edit_text_amount"
+        app:layout_constraintBottom_toBottomOf="@id/edit_text_amount"/>
+
+    <LinearLayout
+        android:id="@+id/layout_pay_area"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:orientation="vertical"
+        app:layout_constraintTop_toBottomOf="@id/text_view_amount_title">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/button_pay"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:layout_weight="1"
+                android:background="#FF9800"
+                android:text="Pay (Intent)"
+                android:textColor="#ffffff" />
+
+            <Button
+                android:id="@+id/button_pay_socket"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:layout_weight="1"
+                android:background="#FF9800"
+                android:text="Pay (Socket)"
+                android:textColor="#ffffff" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/button_alipay"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:layout_weight="1"
+                android:background="#22a6b3"
+                android:text="Alipay (Intent)"
+                android:textColor="#ffffff" />
+
+            <Button
+                android:id="@+id/button_alipay_socket"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:layout_weight="1"
+                android:background="#22a6b3"
+                android:text="Alipay (Socket)"
+                android:textColor="#ffffff" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/button_wechat"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:layout_weight="1"
+                android:background="#4CAF50"
+                android:text="Wechat (Intent)"
+                android:textColor="#ffffff" />
+
+            <Button
+                android:id="@+id/button_wechat_socket"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:layout_weight="1"
+                android:background="#4CAF50"
+                android:text="WeChat (Socket)"
+                android:textColor="#ffffff" />
+        </LinearLayout>
+
+    </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
-        android:orientation="horizontal"
-        android:weightSum="2"
-        app:layout_constraintTop_toBottomOf="@id/text_view_amount_title">
+        android:layout_marginTop="20dp"
+        android:orientation="vertical"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/layout_pay_area">
 
-        <Button
-            android:id="@+id/button_pay"
-            android:layout_width="0dp"
+        <TextView
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="10dp"
-            android:layout_weight="1"
-            android:background="#22a6b3"
-            android:text="Pay"
-            android:textColor="#ffffff" />
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:gravity="center"
+            android:text="Settings"
+            android:textSize="18sp" />
 
-        <Button
-            android:id="@+id/button_clear"
-            android:layout_width="0dp"
+        <TextView
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_margin="10dp"
-            android:layout_weight="1"
-            android:background="#ffbe76"
-            android:text="Clear"
-            android:textColor="#ffffff" />
+            android:text="Server IP" />
+
+        <android.support.v7.widget.AppCompatEditText
+            android:id="@+id/edit_text_server_ip"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="Server Port" />
+
+        <android.support.v7.widget.AppCompatEditText
+            android:id="@+id/edit_text_server_port"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
 
     </LinearLayout>
+
+
 </android.support.constraint.ConstraintLayout>
 
